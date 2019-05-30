@@ -4,7 +4,7 @@ This code converts raster images (PNG) of sketches/edge-maps into vector represe
 - each 'path' is a sequence of segments defined by moveto (starting point of the stroke), lineto (straight line segment) and curveto (cubic Bézier curve segment).
 - cubic Bézier segment is defined by a start point, an end point, and two control points.
 
-The unique advantage of vector format SVG, is that it can be resized to any dimension without loosing quality or detail of the image. Moreover it also conserves the information regarding the sequential order of strokes in sketches.
+The unique advantage of vector format SVG is that it can be resized to any dimension without loosing quality or detail of the image. Moreover it also conserves the information regarding the sequential order of strokes in sketches.
 
 ## Walk-through
 Platform: linux-64
