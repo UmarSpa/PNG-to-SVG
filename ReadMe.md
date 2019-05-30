@@ -19,52 +19,42 @@ bash ./main.sh
 ## Explanation
 Input: PNG files of any dimension.
 
-**Resizing and thresholding**
-
+**Resizing and thresholding**  
 Often the raster sketch/edge-map images are in greyscale and of various sizes.
 Here these two factors are normalized by:
 1) resizing the input image to 500x500.
 2) rescaling the values between 0 and 1, and then thresholding at 0.5 to get the binary output image.
 
-**PNG to PPM**
-
+**PNG to PPM**  
 Png images are converted to ppm. Autotrace requires this format as input.
 
-**PPM to SVG**
-
+**PPM to SVG**  
 Using Autotrace the rasterized images are converted to svg.
 
-**SVG cleaning**
+**SVG cleaning**  
 Unnecessary paths are deleted.
 
-**One path for each stroke**
-
+**One path for each stroke**  
 Svg file containing one path to represent the whole sketch/edge-map is broken down into one path for each stroke.
 
-**Small path removal**
-
+**Small path removal**  
 We recommend to use this only for edge-maps. It removes unwanted grains (/very small sized segments) in the edge-maps.
 
-**Longest path first**
-
+**Longest path first**  
 The longest stroke (/path) is moved at the first place in the sequential order in which strokes (/paths) are saved.
 
-**Reorder path sequence**
-
+**Reorder path sequence**  
 Starting from the first stroke, we compute the distance between its end point and the start points of all the other strokes. The stroke with the nearest start point is appended next in the ordered sequence of paths. In this way the jumps in between the two consecutive strokes are kept to minimum.
 
-**SVG cleaning**
-
+**SVG cleaning**  
 Vacant spaces are removed, and one path is put in each line.
 
-**TUBerlin format conversion**
-
+**TUBerlin format conversion**  
 The format is changed to TUBerlin svg format:
 - 'style' attribute is removed from the paths.
 - sketch is scaled to 800x800, along with the addition of other attributes in the header, including 'preserveAspectRatio', 'viewBox', 'stroke', 'stroke-width' and 'transform'.
 
-**SVG to PNG**
-
+**SVG to PNG**  
 SVG output is also converted to 256x256 PNG format.
 
 Output: SVG (800x800) and PNG (256x256) format
