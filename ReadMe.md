@@ -28,7 +28,7 @@ Here these two factors are normalized by:
 
 **PNG to PPM**
 
-png images are converted to ppm. Autotrace requires this format as input.
+Png images are converted to ppm. Autotrace requires this format as input.
 
 **PPM to SVG**
 
@@ -39,7 +39,7 @@ Unnecessary paths are deleted.
 
 **One path for each stroke**
 
-svg file containing one path to represent the whole sketch/edge-map is broken down into one path for each stroke.
+Svg file containing one path to represent the whole sketch/edge-map is broken down into one path for each stroke.
 
 **Small path removal**
 
