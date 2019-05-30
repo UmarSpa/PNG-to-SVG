@@ -1,4 +1,4 @@
-# Vecotrization of raster images: PNG to SVG
+# Vectorization of raster images: PNG to SVG
 This code converts raster images (PNG) of sketches/edge-maps into vector representation (SVG). More importantly we use the same svg format as the one used in TUBerlin (a commonly used sketch dataset), where:
 - shape and geometry of each stroke is represented by a 'path'.
 - each 'path' is a sequence of segments defined by moveto (starting point of the stroke), lineto (straight line segment) and curveto (cubic Bézier curve segment).
