@@ -1,4 +1,4 @@
-# Vecotrization of raster images: PNG to SVG.
+# Vecotrization of raster images: PNG to SVG
 This code converts raster images (PNG) of sketches/edge-maps into vector representation (SVG). More importantly we use the same svg format as the one used in TUBerlin (a commonly used sketch dataset), where:
 - the shape and geometry of each stroke is represented by a 'path'.
 - each 'path' is a sequence of segments defined by moveto (starting point of the stroke), lineto (straight line segment) and curveto (cubic Bézier curve segment).
@@ -6,7 +6,7 @@ This code converts raster images (PNG) of sketches/edge-maps into vector represe
 
 The unique advantage of vector format SVG, is that it can be resized to any dimension without loosing quality or detail of the image. Moreover it also conserves the information regarding the sequential order of strokes in sketches.
 
-# Walk-through
+## Walk-through
 Platform: linux-64
 ```bash
 conda create --name PNG2SVG --file requirements.txt
@@ -16,7 +16,7 @@ cd PNG2SVG
 bash ./main.sh
 ```
 
-# Explanation
+## Explanation
 Input: PNG files of any dimension.
 
 **Resizing and thresholding**
