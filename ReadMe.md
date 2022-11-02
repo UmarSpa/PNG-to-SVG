@@ -10,9 +10,10 @@ The unique advantage of vector format SVG is that it can be resized to any dimen
 Platform: linux-64
 ```bash
 cd PNG-to-SVG
-conda create --name PNG2SVG --file requirements.txt
-source activate PNG2SVG
-pip install svgpathtools
+conda create --name PNG2SVG python=<3.9>
+conda activate PNG2SVG
+pip install opencv-python scipy matplotlib
+bash ./install.sh
 bash ./main.sh
 ```
 
